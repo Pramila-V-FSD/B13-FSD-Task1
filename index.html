@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1% 15% 1% 15%;
+        }
+
+        .Logo {
+            font-family: "Volkhov", serif;
+            font-weight: 100;
+            font-size: 24px;
+            line-height: 3;
+            color: #222222;
+        }
+
+        .nav-links a {
+            color: #222222;
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        /* Flexbox container for Login and Signup button */
+        section {
+            background-color: #FEFCFB;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .Login {
+            color: #FD8D3A;
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .place-holder {
+            border-radius: 5px;
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #FFFFFF;
+            background-color: #FA7436;
+            padding: 8px 25px;
+            border-color: #FA7436;
+            -webkit-box-shadow: 0px 5px 16px 0px rgba(250, 116, 54, 1);
+            -moz-box-shadow: 0px 5px 16px 0px rgba(250, 116, 54, 1);
+            box-shadow: 0px 5px 16px 0px rgba(250, 116, 54, 1);
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1% 15% 0% 15%;
+
+
+        }
+
+        .para1 {
+            font-size: 64px;
+            font-family: "Volkhov", serif;
+            font-weight: 700;
+            color: #222222;
+            line-height: 70px;
+            width: 521px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            text-align: left;
+
+        }
+
+        .para1 span {
+            color: #FA7436;
+        }
+
+        .para2 {
+            font-size: 20;
+            font-family: "Poppins", sans-serif;
+            color: #666666;
+            line-height: 40px;
+            margin-top: 5%;
+
+
+        }
+
+        .discover {
+            color: #FA7436;
+            background-color: #FFFFFF;
+            font-size: 18px;
+            line-height: 32px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            border-color: #FA7436;
+            border-radius: 3px;
+            padding: 5px 20px 5px 20px;
+            margin-top: 10%;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5%;
+        }
+
+        .holder {
+            background-color: #FFFFFF;
+
+            width: 50%;
+            padding: 2rem;
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        .content-holder {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .select-group {
+            display: flex;
+            justify-content: space-around;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .label {
+            font-size: 16px;
+            font-weight: 500;
+            color: #222222;
+            line-height: 30px;
+        }
+
+        .option {
+            margin: 0 45px 0 45px;
+        }
+
+        .option span {
+            color: #fa7436;
+        }
+
+        .sub-label {
+            font-size: 12px;
+            color: #666666;
+        }
+
+        .button-holder {
+            margin-top: 10px;
+        }
+
+        .button-holder a {
+            background-color: #fa7436;
+            padding: 1rem;
+            border-radius: 5px;
+            color: white;
+            font-family: "Poppins", sans-serif;
+            margin-top: 3px;
+            cursor: pointer;
+        }
+
+        .section1 {
+            background-color: #F7F8FC;
+
+
+        }
+
+        .travel-body {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .travel-body img {
+            margin-top: 5%;
+        }
+
+        .para3 {
+            font-size: 48px;
+            font-family: "Volkhov", serif;
+            font-weight: 100;
+            margin-top: 20%;
+            color: #222222;
+        }
+
+        .para3 span {
+            color: #FA7436;
+        }
+
+        .para4 {
+            font-size: 18px;
+
+            font-family: "Poppins", sans-serif;
+            color: #666666;
+            margin-top: 5%;
+            text-align: center;
+            align-items: center;
+        }
+
+        .group {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 3% 10% 5% 0%;
+
+
+        }
+
+        .signup-group {
+            background-color: #FFFFFF;
+            padding: 1.8% 2% 1.3% 2%;
+            -webkit-box-shadow: 14px 24px 72px 0px rgba(102, 102, 102, 0.1);
+            -moz-box-shadow: 14px 24px 72px 0px rgba(102, 102, 102, 0.1);
+            box-shadow: 14px 24px 72px 0px rgba(102, 102, 102, 0.1);
+
+        }
+
+        .para5 {
+            font-family: "poppins";
+            font-weight: 600;
+            font-size: 24px;
+            margin-top: 9%;
+            color: #222222;
+        }
+
+        .para6 {
+            margin-top: 5%;
+            font-family: "poppins";
+            font-size: 16px;
+        }
+
+        .money-group {
+            background-color: #FFFFFF;
+            padding: 1.8% 2% 1% 2%;
+            -webkit-box-shadow: 14px 24px 72px 0px rgba(102, 102, 102, 0.1);
+            -moz-box-shadow: 14px 24px 72px 0px rgba(102, 102, 102, 0.1);
+            box-shadow: 14px 24px 72px 0px rgba(102, 102, 102, 0.1);
+
+
+        }
+
+        .para7 {
+            font-family: "poppins";
+            font-weight: 600;
+            font-size: 24px;
+            margin-top: 9%;
+            color: #222222;
+        }
+
+        .para8 {
+            margin-top: 5%;
+            font-family: "poppins";
+            font-size: 16px;
+        }
+
+        .travel-group {
+            background-color: #FFFFFF;
+            padding: 1.8% 2% 1% 2%;
+            -webkit-box-shadow: 14px 24px 72px 0px rgba(102, 102, 102, 0.1);
+            -moz-box-shadow: 14px 24px 72px 0px rgba(102, 102, 102, 0.1);
+            box-shadow: 14px 24px 72px 0px rgba(102, 102, 102, 0.1);
+
+
+        }
+
+        .para9 {
+            font-family: "poppins";
+            font-weight: 600;
+            font-size: 24px;
+            margin-top: 9%;
+            color: #222222;
+
+        }
+
+        .para10 {
+
+            margin-top: 5%;
+            font-family: "poppins";
+            font-size: 16px;
+        }
+
+        .section2 {
+            margin-top: 5%;
+        }
+
+        .exclusive-content {
+            display: flex;
+            justify-content: center;
+            color: #222222;
+            font-weight: 700;
+            font-size: 48px;
+            font-family: "Volkhov";
+
+
+
+        }
+
+        .exclusive-content span {
+            color: #FA7436;
+            margin-left: 10px;
+        }
+
+        .exclusive-content1 {
+            display: flex;
+            justify-content: center;
+            font-family: "Poppins";
+            font-size: 18px;
+            color: #666666;
+            align-items: center;
+            text-align: center;
+            margin-top: 2%;
+        }
+
+        .image-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .image1 {
+            margin-top: 1%;
+            padding: 1% 1% 1% 1%;
+        }
+
+        .image2 {
+
+            padding: 1% 1% 1% 1%;
+        }
+
+        .image3 {
+            padding: 1% 1% 1% 1%;
+        }
+
+        .image4 {
+            padding: 1% 1% 1% 1%;
+        }
+
+        .round-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 2%;
+
+        }
+
+        .button1 {
+            border-radius: 50%;
+            padding: 6px;
+            background-color: #FEFCFB;
+            border-color: #999999;
+        }
+
+        .button2 {
+            border-radius: 50%;
+            padding: 6px;
+            background-color: #FA7436;
+            border-color: #FA7436;
+        }
+
+        .vacation-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 5%;
+            margin-top: 7%;
+        }
+
+        .vacation1 {
+            font-family: "Volkhov";
+            font-size: 48px;
+            font-weight: 700;
+            color: #222222;
+
+        }
+
+        .vacation1 span {
+            color: #FA7436;
+
+        }
+
+        .vacation2 {
+            font-size: 18;
+            font-family: "Poppins";
+            color: #666666;
+            margin-top: 2%;
+            line-height: 32px;
+
+        }
+
+        .arrow-button {
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 1%;
+            margin-left: 37%;
+
+        }
+
+        .button3 {
+            border-radius: 50%;
+            padding: 6px;
+            background-color: #FEFCFB;
+            border-color: #999999;
+        }
+
+        .button4 {
+            border-radius: 50%;
+            padding: 6px;
+            background-color: #FA7436;
+            border-color: #FA7436;
+        }
+
+        .vacation-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2%;
+
+        }
+
+        .review-box {
+            gap: 20px;
+            display: flex;
+            justify-content: center;
+
+            gap: 9%;
+            margin-top: 7%;
+
+        }
+
+        .review {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            background-color: #F7F8FC;
+
+        }
+
+        .review-image {
+            margin-top: 5%;
+        }
+
+        .opinion-header {
+            font-family: "Volkhov";
+            font-size: 48px;
+            color: #222222;
+            font-weight: 700;
+
+
+        }
+
+        .opinion-header span {
+            color: #FA7436;
+
+        }
+
+        .opinion-para {
+            font-family: "Roboto";
+            font-size: 16px;
+            line-height: 32px;
+            color: #666666;
+            margin-top: 1%;
+
+        }
+
+        .opinion-button {
+            gap: 50px;
+            margin-top: 3.5%;
+
+        }
+
+        .review-content1 {
+            width: 504px;
+            height: 245px;
+            background-color: #FFFFFF;
+            position: relative;
+            z-index: 50;
+            margin-top: 2%;
+            padding: 5%;
+
+        }
+
+        .review1 {
+            font-family: "Poppins";
+            font-size: 16px;
+            color: #444444;
+            line-height: 32px;
+
+
+        }
+
+        .review-name {
+            font-family: "Poppins";
+            font-weight: 600;
+            font-size: 18px;
+            color: #222222;
+            margin-top: 7%;
+        }
+
+        .review-name span {
+            font-family: "Poppins";
+            font-weight: 500;
+            font-size: 14px;
+            color: #666666;
+        }
+
+        .review-content2 {
+            width: 502px;
+            height: 232px;
+            background-color: #FFFFFF;
+            opacity: 100%;
+            position: relative;
+            z-index: 40;
+            left: 10%;
+            top: -170px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+
+
+        }
+
+        .review-name1 {
+            font-family: "Poppins";
+            font-weight: 600;
+            font-size: 18px;
+            color: #222222;
+            opacity: 50%;
+
+        }
+
+        .review-name1 span {
+            font-family: "Poppins";
+            font-weight: 500;
+            font-size: 14px;
+            color: #666666;
+            opacity: 50%;
+        }
+
+        .reviewer-image {
+            margin-right: 3%;
+            border-radius: 50%;
+
+        }
+
+        .latest-blog {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Volkhov";
+            font-size: 48px;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .latest-blog span {
+            color: #FA7436;
+        }
+
+        .blog-image1 {
+
+            height: 270px;
+            width: 270px;
+        }
+
+        .image1-para1 {
+            font-family: "poppins";
+            font-size: 18;
+            font-weight: 500;
+            line-height: 26px;
+            color: #222222;
+            width: 244px;
+            height: 52px;
+            margin-top: 2%;
+        }
+
+        .image1-para2 {
+            font-family: "inter";
+            color: #999999;
+            font-size: 16px;
+            margin-top: 2%;
+        }
+
+        .blog-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3%;
+            margin-top: 3%;
+        }
+
+        .slider-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3%;
+            gap: 0.5%;
+            margin-bottom: 5%;
+
+        }
+
+        .subscribe-header {
+            font-family: "Volkhov";
+            font-weight: 700;
+            font-size: 48px;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .email {
+
+            margin-top: 4%;
+
+        }
+
+        .input-email {
+            color: #999999;
+            font-size: 16px;
+            font-family: "Poppins";
+            width: 542px;
+            height: 68px;
+        }
+
+        .input-button {
+            color: #FFFFFF;
+            padding: 2px 5px 2px 5px;
+            background-color: #FA7436;
+            border-radius: 10%;
+            width: 132px;
+            height: 68px;
+        }
+
+        .subscribe-content {
+            background-color: #FA7436;
+            width: 708px;
+            height: 256px;
+
+
+
+
+        }
+
+        .subscribe {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+
+        }
+
+        .element1 {
+            margin-left: 80%;
+        }
+
+
+        .footer {
+            background-color: #FA7436;
+            height: 416px;
+            width: 1170px;
+        }
+
+        .footer-section {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .bottom1 {
+            height: 176px;
+            width: 254px;
+        }
+
+        .bottom-para {
+            font-family: "Poppins";
+            font-size: 16px;
+            font-weight: 500;
+            color: #666666;
+            line-height: 32px;
+        }
+
+        .bottom-button1 {
+            padding: 3.5%;
+            background-color: white;
+            border-radius: 100%;
+            border-color: white;
+            margin-right: 4%;
+        }
+
+        .bottom-button2 {
+            padding: 3.5%;
+            background-color: #FA7436;
+            border-radius: 70%;
+            background-color: #FA7436;
+            margin-right: 4%;
+        }
+
+        .bottom-button3 {
+            padding: 3.5%;
+            background-color: white;
+            border-radius: 70%;
+            border-color: #FFFFFF;
+        }
+
+        .bottom21 {
+            height: 210px;
+            width: 140px;
+        }
+
+        .bottom22 {
+            height: 168px;
+            width: 85px;
+        }
+
+        .bottom23 {
+            height: 168px;
+            width: 113px;
+        }
+
+        .bottom-Sideheader {
+            font-family: "Poppins";
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .bottom-Sidefooter {
+            font-family: "Poppins";
+            font-size: 18px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            gap:10%;
+            margin-bottom: 2%;
+            margin-top: 4%;
+            
+        }
+        .last-content{
+            display: flex;
+            justify-content: space-around;
+            color: #666666;
+            font-family:"Poppins" ;
+            font-size: 16px;
+            border-top-left-radius: 5px;
+            border-top-style: solid;
+            border-top-color: #999999;
+            
+        
+            
+        }
+        .last-content p{
+            margin-top: 3%;
+
+        }
+        
+
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="Logo">Trabook <span><svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M1.64111 4.96058C1.79426 4.76583 1.99595 4.50221 2.15747 4.31379C2.6412 3.79446 2.70397 3.72638 3.14417 3.34242C3.27473 3.24108 3.42956 3.11917 3.58103 3.00437C2.46378 3.89896 2.32151 4.88933 3.3467 5.50129C3.34503 5.50129 3.34503 5.50129 3.34503 5.50287C4.77863 6.31987 7.92034 6.14333 10.3992 5.09675C12.8003 4.08342 13.6865 2.63388 12.5015 1.77254C11.4612 1.58808 10.221 1.56671 8.90871 1.73296L8.7723 1.52L8.88528 1.16692C9.6569 1.10121 10.39 1.11704 11.0227 1.21917C11.1759 1.24371 11.3776 1.28567 11.5282 1.31575C11.8194 1.38304 11.9776 1.42342 12.1676 1.48121C12.3617 1.53583 12.5274 1.59046 12.8162 1.69179C13.099 1.79708 13.2212 1.84458 13.448 1.95146C13.702 2.06108 13.9488 2.18506 14.187 2.32275C16.0751 3.44612 14.9009 5.49575 11.5692 6.90017C8.24673 8.29983 4.01287 8.51992 2.11563 7.41C2.11479 7.40842 2.11228 7.40683 2.10726 7.40525H2.11061C1.07453 6.78458 0.965735 5.88367 1.64111 4.96058ZM10.2854 12.8139L10.2586 11.552L9.31042 10.5545C6.17792 11.2258 3.09898 11.0817 1.38669 10.1278C1.38084 10.1215 1.36661 10.1151 1.36075 10.1088C0.391624 9.54433 0.152272 8.816 0.225082 8.02433C-0.00171646 9.18254 -0.0201282 9.60054 0.0125108 10.5917C0.0526817 11.2124 0.431795 11.7847 1.19421 12.236L1.20007 12.2423C3.02533 13.3158 6.82819 13.5486 10.2854 12.8139ZM14.2397 14.2587C9.81842 15.9362 4.28486 16.0352 1.8813 14.4827C2.14087 15.0828 2.49406 15.6427 2.92909 16.1437C5.13515 17.5687 10.2143 17.4776 14.2707 15.9378C16.645 15.0377 18.143 13.8399 18.5364 12.7173L18.6468 12.3793C18.9088 11.5227 18.9582 10.8094 19 10.1745C18.9523 11.5528 17.2358 13.1203 14.2397 14.2587ZM4.47986 17.4895C4.61878 17.6146 5.05564 18.122 7.26923 18.6825C7.86761 18.8076 9.37403 19.209 12.1567 18.6255L12.1734 18.3857L11.9533 18.0595C9.37151 18.6374 6.50347 18.4442 4.47986 17.4895ZM10.8687 7.50737L13.2196 9.19283C13.2196 9.19283 13.7225 9.53563 13.248 9.77629C12.7752 10.0146 11.5608 10.598 11.5608 10.598L10.3616 10.1745L9.75983 10.4278L10.821 11.2995L10.8294 12.6556L11.4529 12.3935L11.8663 11.248C11.8663 11.248 13.1359 10.7857 13.6397 10.6115C14.146 10.4413 14.0782 11.024 14.0782 11.024L13.8288 13.8035L14.6573 13.4552L16.0215 9.70504C16.0215 9.70504 16.7446 9.37254 17.2534 9.08042C17.7614 8.78829 17.9355 8.30379 17.9355 8.30379C17.9355 8.30379 17.44 8.10192 16.8693 8.26421C16.2985 8.42492 15.5545 8.7115 15.5545 8.7115L11.6947 7.16062L10.8687 7.50737ZM5.89505 2.17471L7.49101 3.37725L7.92703 3.3155L7.05833 2.23646C7.05833 2.23646 6.8692 2.01321 7.12361 1.96017C7.3797 1.90633 8.02746 1.78125 8.02746 1.78125L8.51453 2.14937L8.8426 2.10346L8.47101 1.54454L8.66685 0.924667L8.34966 0.968208L7.9739 1.44004C7.9739 1.44004 7.31442 1.49862 7.05499 1.51921C6.79388 1.53821 6.90602 1.273 6.90602 1.273L7.40648 0L6.96795 0.0609583L5.81303 1.65142C5.81303 1.65142 5.42806 1.71792 5.14938 1.79313C4.86985 1.86754 4.72256 2.07179 4.72256 2.07179C4.72256 2.07179 4.9276 2.22854 5.21633 2.223C5.50757 2.21746 5.89505 2.17471 5.89505 2.17471ZM13.7828 17.6265L12.7501 17.1158L12.5124 17.1942L13.1242 17.712C13.1242 17.712 13.2547 17.8172 13.1175 17.8735C12.9802 17.9289 12.6304 18.065 12.6304 18.065L12.3417 17.9431L12.1701 18.0017L12.4103 18.244L12.3868 18.5978L12.5659 18.5392L12.6998 18.2519C12.6998 18.2519 13.0631 18.1497 13.2078 18.1133C13.3518 18.0761 13.3192 18.236 13.3192 18.236L13.1827 19L13.4213 18.9216L13.8891 17.9115C13.8891 17.9115 14.0958 17.8347 14.2439 17.7642C14.3921 17.6937 14.4506 17.5639 14.4506 17.5639C14.4506 17.5639 14.3192 17.4958 14.1569 17.5299C13.9937 17.5623 13.7828 17.6265 13.7828 17.6265Z"
+                            fill="#666666" />
+                    </svg>
+                </span>
+
+            </div>
+            <div class="nav-links">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Destination</a>
+                <a href="">Tour</a>
+                <a href="">Blog</a>
+            </div>
+            <div class="container">
+                <div class="Login">Login</div>
+                <button class="place-holder">Signup</button>
+            </div>
+        </nav>
+    </header>
+    <section1>
+        <div class="content">
+            <div class="paragraph">
+
+                <p class="para1">Get started your exciting <span>journey</span> with us</p>
+                <p class="para2">A Team of experienced tourism professionals will <br>provide you with the best advice
+                    and tips of your <br> desire place</p>
+                <button class="discover">Discover Now</button>
+            </div>
+            <div class="picture"><img src="Image.png"></div>
+        </div>
+        <div class="select_group">
+
+        </div>
+        <div class="main">
+            <div class="holder">
+                <div class="content-holder">
+                    <div class="select-group">
+                        <div class="option location">
+                            <div class="label">Location <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1.5L6 6.5L11 1.5" stroke="#FA7436" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></span></div>
+                            <div class="sub-label">Where are you going</div>
+                        </div>
+                        <div class="option date">
+                            <div class="label">Date <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1.5L6 6.5L11 1.5" stroke="#FA7436" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></span></div>
+                            <div class="sub-label">When you will go</div>
+                        </div>
+                        <div class="option guest">
+                            <div class="label">Guest <span><svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1.5L6 6.5L11 1.5" stroke="#FA7436" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></span></div>
+                            <div class="sub-label">Number of guest</div>
+                        </div>
+                    </div>
+                    <div class="button-holder"><a class="btn-text">Explorer Now</a></div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <section>
+            <div class="section1">
+                <div class="travel-body">
+                    <div class="travel">
+                        <p class="para3">Things you need <span>to do</span></p>
+                        <p class="para4">We ensure that you'll embark on a perfectly planned,<br> safe vaction at a
+                            price you can affort.</p>
+                    </div>
+                    <img src="Element.png">
+                </div>
+                <div class="group">
+                    <div class="signup-group">
+
+                        <img src="Group.png" alt=""><br>
+                        <p class="para5">Sign Up</p>
+                        <p class="para6">Complete all the work associated <br>with planning and processing</p>
+
+                    </div>
+                    <div class="money-group">
+                        <img src="Group (1).png" alt=""><br>
+                        <p class="para7">Worth Of Money</p>
+                        <p class="para8">After successful access then book <br>from exclusive deals & pricing</p>
+                    </div>
+                    <div class="travel-group">
+                        <img src="Group (2).png" alt=""><br>
+                        <p class="para9">Exciting Travel</p>
+                        <p class="para10">Start and explore a wide range of <br>exciting travel experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="section2">
+                <div class="exclusive-box">
+                    <p class="exclusive-content">Exclusive <span>deals & discounts</span></p>
+                    <p class="exclusive-content1">Discover our fantastic early booking discounts<br>& start planning our
+                        journey.</p>
+                </div>
+                <div class="image-box">
+                    <div class="image1"><img src="Card-1.png"></div>
+                    <div class="image2"><img src="Card-2.png"></div>
+                    <div class="image3"><img src="Card-3.png"></div>
+                    <div class="image4"><img src="Card-4.png"></div>
+                </div>
+                <div class="round-button">
+                    <button class="button1"><img src="Arrow 2.png"></button>
+                    <button class="button2"><img src="Arrow 3.png"></button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="vacation">
+                <div class="vacation-content">
+                    <div class="vacation para">
+                        <p class="vacation1">Best <span>vacation plan</span></p>
+                        <p class="vacation2">Plan your perfect vacation with our travel agency.Choose <br> among
+                            hundreds of all-inclusive offers!</p>
+                    </div>
+                    <img src="Tree.png" alt="">
+                </div>
+                <div class="arrow-button">
+                    <button class="button3"><img src="Arrow 2.png"></button>
+                    <button class="button4"><img src="Arrow 3.png"></button>
+                </div>
+            </div>
+            <div class="vacation-image">
+                <div class="v-image1"><img src="vacation-image1.png"></div>
+                <div class="v-image2"><img src="vacation-image2.png"></div>
+                <div class="v-image3"><img src="vacation-image3.png"></div>
+
+
+            </div>
+
+        </section>
+
+        <section>
+            <div class="review">
+                <div class="review-box">
+                    <div class="opinion">
+                        <div class="option-content">
+                            <h1 class="opinion-header">What people say <span>about us.</span></h1>
+                            <p class="opinion-para">Our Clients send us bunch of smilies with our services <br>and we
+                                love them.
+                            </p>
+                        </div>
+                        <div class="opinion-button">
+                            <button class="button3"><img src="Arrow 2.png" alt=""></button>
+                            <button class="button4"><img src="Arrow 3.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <img class="reviewer-image" src="reviewer-image.png">
+                        <div class="review-content1">
+                            <P class="review1">"on the windows talking painted pasture yet its<br> express parties
+                                use.Sure
+                                last upon he same as <br>knew next.Of belived or diverted no.</P>
+                            <p class="review-name">Mike taylor <br><span>Lahore,Pakistan</span></p>
+                        </div>
+                        <div class="review-content2">
+                            <p class="review-name1">Chris Thomas <br><span>CEO of Red Button</span></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="review-image"><img src="review-image.png" alt=""></div>
+            </div>
+        </section>
+        <section>
+            <div class="blog">
+                <div class="latest-blog">
+                    <h1 class="blog-header">Get update with <span>latest blog</span></h1>
+                </div>
+                <div class="blog-images">
+                    <div class="blog-content1">
+                        <div class="blog-image1">
+                            <img src="blog-image1.png" alt="">
+                        </div>
+                        <div class="image1-content">
+                            <p class="image1-para1"> The Amazing Difference a Year of Travelling.</p>
+                            <p class="image1-para2">July 27,2021</p>
+                        </div>
+
+                    </div>
+                    <div class="blog-content1">
+                        <div class="blog-image1">
+                            <img src="blog-image2.png" alt="">
+                        </div>
+                        <div class="image1-content">
+                            <p class="image1-para1"> Travel for enough,you meet yourself.</p>
+                            <p class="image1-para2">July 27,2021</p>
+                        </div>
+                    </div>
+                    <div class="blog-content1">
+                        <div class="blog-image1">
+                            <img src="blog-image3.png" alt="">
+                        </div>
+                        <div class="image1-content">
+                            <p class="image1-para1"> How to Save Money While Visiting Africa.</p>
+                            <p class="image1-para2">July 27,2021</p>
+                        </div>
+
+
+                    </div>
+                    <div class="blog-content1">
+                        <div class="blog-image1">
+                            <img src="blog-image4.png" alt="">
+                        </div>
+                        <div class="image1-content">
+                            <p class="image1-para1"> Reflections on 5 Months of Travel:Time to Hang.</p>
+                            <p class="image1-para2">July 27,2021</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-image">
+                    <img src="Ellipse 32.png">
+                    <img src="Ellipse 33.png">
+                    <img src="Ellipse 34.png">
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <div class="footer-section">
+                <div class="footer">
+                    <div class="element1">
+                        <img src="Element (1).png">
+                    </div>
+                    <div class="subscribe">
+                        <div class="subscribe-content">
+                            <h1 class="subscribe-header">Subscribe and get exclusive deals & offer</h1>
+                            <div class="email">
+                                <input class="input-email" type="text" value="Enter your email">
+                                <button class="input-button">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="bottom1">
+                    <div class="Logo">Trabook <span><svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.64111 4.96058C1.79426 4.76583 1.99595 4.50221 2.15747 4.31379C2.6412 3.79446 2.70397 3.72638 3.14417 3.34242C3.27473 3.24108 3.42956 3.11917 3.58103 3.00437C2.46378 3.89896 2.32151 4.88933 3.3467 5.50129C3.34503 5.50129 3.34503 5.50129 3.34503 5.50287C4.77863 6.31987 7.92034 6.14333 10.3992 5.09675C12.8003 4.08342 13.6865 2.63388 12.5015 1.77254C11.4612 1.58808 10.221 1.56671 8.90871 1.73296L8.7723 1.52L8.88528 1.16692C9.6569 1.10121 10.39 1.11704 11.0227 1.21917C11.1759 1.24371 11.3776 1.28567 11.5282 1.31575C11.8194 1.38304 11.9776 1.42342 12.1676 1.48121C12.3617 1.53583 12.5274 1.59046 12.8162 1.69179C13.099 1.79708 13.2212 1.84458 13.448 1.95146C13.702 2.06108 13.9488 2.18506 14.187 2.32275C16.0751 3.44612 14.9009 5.49575 11.5692 6.90017C8.24673 8.29983 4.01287 8.51992 2.11563 7.41C2.11479 7.40842 2.11228 7.40683 2.10726 7.40525H2.11061C1.07453 6.78458 0.965735 5.88367 1.64111 4.96058ZM10.2854 12.8139L10.2586 11.552L9.31042 10.5545C6.17792 11.2258 3.09898 11.0817 1.38669 10.1278C1.38084 10.1215 1.36661 10.1151 1.36075 10.1088C0.391624 9.54433 0.152272 8.816 0.225082 8.02433C-0.00171646 9.18254 -0.0201282 9.60054 0.0125108 10.5917C0.0526817 11.2124 0.431795 11.7847 1.19421 12.236L1.20007 12.2423C3.02533 13.3158 6.82819 13.5486 10.2854 12.8139ZM14.2397 14.2587C9.81842 15.9362 4.28486 16.0352 1.8813 14.4827C2.14087 15.0828 2.49406 15.6427 2.92909 16.1437C5.13515 17.5687 10.2143 17.4776 14.2707 15.9378C16.645 15.0377 18.143 13.8399 18.5364 12.7173L18.6468 12.3793C18.9088 11.5227 18.9582 10.8094 19 10.1745C18.9523 11.5528 17.2358 13.1203 14.2397 14.2587ZM4.47986 17.4895C4.61878 17.6146 5.05564 18.122 7.26923 18.6825C7.86761 18.8076 9.37403 19.209 12.1567 18.6255L12.1734 18.3857L11.9533 18.0595C9.37151 18.6374 6.50347 18.4442 4.47986 17.4895ZM10.8687 7.50737L13.2196 9.19283C13.2196 9.19283 13.7225 9.53563 13.248 9.77629C12.7752 10.0146 11.5608 10.598 11.5608 10.598L10.3616 10.1745L9.75983 10.4278L10.821 11.2995L10.8294 12.6556L11.4529 12.3935L11.8663 11.248C11.8663 11.248 13.1359 10.7857 13.6397 10.6115C14.146 10.4413 14.0782 11.024 14.0782 11.024L13.8288 13.8035L14.6573 13.4552L16.0215 9.70504C16.0215 9.70504 16.7446 9.37254 17.2534 9.08042C17.7614 8.78829 17.9355 8.30379 17.9355 8.30379C17.9355 8.30379 17.44 8.10192 16.8693 8.26421C16.2985 8.42492 15.5545 8.7115 15.5545 8.7115L11.6947 7.16062L10.8687 7.50737ZM5.89505 2.17471L7.49101 3.37725L7.92703 3.3155L7.05833 2.23646C7.05833 2.23646 6.8692 2.01321 7.12361 1.96017C7.3797 1.90633 8.02746 1.78125 8.02746 1.78125L8.51453 2.14937L8.8426 2.10346L8.47101 1.54454L8.66685 0.924667L8.34966 0.968208L7.9739 1.44004C7.9739 1.44004 7.31442 1.49862 7.05499 1.51921C6.79388 1.53821 6.90602 1.273 6.90602 1.273L7.40648 0L6.96795 0.0609583L5.81303 1.65142C5.81303 1.65142 5.42806 1.71792 5.14938 1.79313C4.86985 1.86754 4.72256 2.07179 4.72256 2.07179C4.72256 2.07179 4.9276 2.22854 5.21633 2.223C5.50757 2.21746 5.89505 2.17471 5.89505 2.17471ZM13.7828 17.6265L12.7501 17.1158L12.5124 17.1942L13.1242 17.712C13.1242 17.712 13.2547 17.8172 13.1175 17.8735C12.9802 17.9289 12.6304 18.065 12.6304 18.065L12.3417 17.9431L12.1701 18.0017L12.4103 18.244L12.3868 18.5978L12.5659 18.5392L12.6998 18.2519C12.6998 18.2519 13.0631 18.1497 13.2078 18.1133C13.3518 18.0761 13.3192 18.236 13.3192 18.236L13.1827 19L13.4213 18.9216L13.8891 17.9115C13.8891 17.9115 14.0958 17.8347 14.2439 17.7642C14.3921 17.6937 14.4506 17.5639 14.4506 17.5639C14.4506 17.5639 14.3192 17.4958 14.1569 17.5299C13.9937 17.5623 13.7828 17.6265 13.7828 17.6265Z"
+                                    fill="#666666" />
+                            </svg>
+                        </span>
+                        <p class="bottom-para">Book your trip in minute,get full control for much longer.</p>
+                        <button class="bottom-button1"><img src="Facebook Icon.png"></button>
+                        <button class="bottom-button2"><img src="instagram 1.png"></button>
+                        <button class="bottom-button3"><img src="twitter.png"></button>
+
+                    </div>
+
+                </div>
+
+                <div class="bottom21">
+                    <h1 class="bottom-Sideheader">Company</h1>
+                    <p class="bottom-Sidefooter">About <br>
+                        Careers<br>
+                        Logistic<br>
+                        Privacy&Policy</p>
+
+
+                </div>
+                <div class="bottom22">
+                    <h1 class="bottom-Sideheader">Contact</h1>
+                    <p class="bottom-Sidefooter">
+                        Help/FAQ<br>
+
+                        Prees<br>
+                        Affilates</p>
+
+
+
+                </div>
+                <div class="bottom23">
+                    <h1 class="bottom-Sideheader">More</h1>
+                    <p class="bottom-Sidefooter">Press centre<br>
+                        Our Blog<br>
+                        Low fare tips
+                    </p>
+
+
+
+                </div>
+
+            </div>
+            <div class="last-content">
+                <p>Copyright,Trabook 2022.All rights reserved.</p>
+                <p>Terms & Condition</p>
+            </div>
+
+        </section>
+</body>
+
+</html>
